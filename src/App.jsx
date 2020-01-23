@@ -1,9 +1,9 @@
 import React from 'react';
-import { Provider } from 'react-redux'
-import store from './store'
-import Footer from './components/Footer'
-import AddTodo from './components/AddTodo'
-import VisibleTodoList from './containers/VisibleTodoList'
+import { Provider } from 'react-redux';
+import store from './store';
+import Footer from './components/Footer';
+import AddTodo from './components/AddTodo';
+import VisibleTodoList from './containers/VisibleTodoList';
 
 function App() {
   return (

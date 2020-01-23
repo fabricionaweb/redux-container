@@ -1,9 +1,10 @@
-import { createStore } from 'redux'
-import rootReducer from './reducers'
+import { createStore } from 'redux';
+import rootReducer from './reducers';
 
 const store = createStore(
-    rootReducer,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-)
+  rootReducer,
+  // eslint-disable-next-line no-underscore-dangle
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
-export default store
+export default store;

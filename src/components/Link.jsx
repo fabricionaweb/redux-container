@@ -1,15 +1,16 @@
-import React from 'react'
+import React from 'react';
 
 const Link = ({ active, children, onClick }) => (
   <button
+    type="button"
     onClick={onClick}
     disabled={active}
     style={{
-      marginLeft: '4px'
+      marginLeft: '4px',
     }}
   >
     {children}
   </button>
-)
+);
 
-export default Link
+export default Link;
