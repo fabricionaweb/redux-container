@@ -1,13 +1,18 @@
 import React from 'react'
-import { connectWithAddTodo, AddTodoContainer, useAddTodo } from '../containers/AddTodo.container'
+import { 
+  // connectWithAddTodo, 
+  AddTodoContainer, 
+  // useAddTodo 
+} from '../containers/AddTodo.container'
 
-const AddTodo = ({ addTodo }) => {
+const AddTodo = (props) => {
   let input
-  // const { addTodo } = useAddTodo();
+  // const { addTodo } = useAddTodo(); // hooks
+  // const { addTodo } = props; // connectorWith
 
   return (
-    // <AddTodoContainer>
-      // {({ addTodo }) => (
+    <AddTodoContainer>
+      {({ addTodo }) => (
         <div>
           <form
             onSubmit={e => {
@@ -25,9 +30,10 @@ const AddTodo = ({ addTodo }) => {
             <button type="submit">Add Todo</button>
           </form>
         </div>
-      // )}
-    // </AddTodoContainer>
+      )}
+    </AddTodoContainer>
   )
 }
 
-export default connectWithAddTodo(AddTodo)
+// export default connectWithAddTodo(AddTodo)
+export default AddTodo

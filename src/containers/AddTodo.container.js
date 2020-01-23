@@ -2,7 +2,7 @@ import { bindActionCreators } from "redux"
 import { connect, useSelector, useDispatch } from 'react-redux'
 import { addTodo } from '../store/actions'
 
-const AddTodoContainer = ({ children, ...dispatchToProps }) => children(dispatchToProps)
+const AddTodoContainerComponent = ({ children, ...dispatchToProps }) => children(dispatchToProps)
 
 const mapStateToProps = () => ({})
 
@@ -21,4 +21,4 @@ export const useAddTodo = () => {
 
 export const connectWithAddTodo = Component => connect(mapStateToProps, mapDispatchToProps)(Component);
 
-export default connectWithAddTodo(AddTodoContainer)
+export const AddTodoContainer = connectWithAddTodo(AddTodoContainerComponent);
